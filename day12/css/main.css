@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0;}
+#container{ width:999px; height:auto; margin:0 auto;}
+#container #head{display:block; height:100px; }
+#container #nick{ display:block; height:60px;}
+#container .logo{ width:281px; height:100px; background:url(../images/logo.jpg) no-repeat; float:left;}
+#container .search{ width:227px; height:26px; border:1px solid #e6e6e6; float:right; margin:40px 20px 0 0; background:#f1f1f1}
+#container .search .textSearch{ width:190px; height:26px; padding-left:5px; background:#f1f1f1; border:none; float:left;}
+#container .search .btnSearch{ width:30px; height:23px; background:url(../images/btn.jpg) no-repeat; border:none; float:left; margin-top:2px;}
+#container .nav{ height:59px; list-style:none; background:#323232; color:#fafafa; font-size:16px; line-height:56px; padding-left:12px;}
+#container .nav li{ width:120px; height:59px; border-right:1px solid #494949; display:inline-block; float:left; text-align:center}
+#container .nav .lastLi{ border-right:none;}
+#container #view{ width:999px; height:463px; background:url(../images/view1.jpg) no-repeat; position:relative;}
+#container #view input{ width:48px; height:48px; position:absolute; top:415px; border:none;}
+#container #view #btnRight{ left:932px; background:url(../images/btn3.jpg);}
+#container #view #btnLeft{ left:882px; background:url(../images/btn2.jpg);}
+#container .body{ height:546px; padding-left:20px; padding-top:36px;}
+#container .bLeft{ width:464px; padding-right:26px; float:left;}
+#container .body h3{ font-size:18px; font-weight:500;}
+#container .bLeft ul{ list-style:none; margin-top:30px; }
+#container .bLeft li{ width:373px; height:25px; display:inline-block; font-size:12px; line-height:25px;}
+#container .bLeft .date{ width:65px; font-size:10px;}
+#container .bMiddle{ width:193px; height:241px; background:#f1f1f1; float:left; padding-left:25px; padding-right:22px;}
+#container .bMiddle div{ margin-top:35px; font-size:14px;}
+#container .bMiddle a{ display:block; font-size:12px; margin-top:12px;}
+#container .bMiddle span{ display:block; font-size:12px; color:#949494; margin-top:26px; line-height:26px;}
+#container .bRight{ margin-left:23px; width:226px; float:left}
+#container .bRight a{ display:block; line-height:24px; font-size:12px; color:#666666; margin-top:24px;}
+#container .bRight .hey input{ width:67px; height:19px; border:none; background:#afafaf; color:#FFF; margin-top:56px; border:1px solid #afafaf; border-radius:2px; font-size:10px;}
+#container .bRight .hey{ height:120px; background: url(../images/%E6%9C%AA%E6%A0%87%E9%A2%98-2.jpg) 110px 0 no-repeat;}
+#container .bBottom{ height:220px; width:979px; float:left;}
+#container .bBottom ul{ list-style:none; margin-top:18px;}
+#container .bBottom ul li{ float:left; width:210px;  margin-left:40px;}
+#container .bBottom ul .hi{ margin-left:0;}
+#container .bBottom ul li div{  height:136px; opacity:0.7;}
+#container .bBottom ul li:hover div{ opacity:1; }
+#container .bBottom ul li .img1{ background:url(../images/img1-3.jpg);}
+#container .bBottom ul li .img2{ background:url(../images/img2.jpg);}
+#container .bBottom ul li .img3{ background:url(../images/img3.jpg);}
+#container .bBottom ul li .img4{ background:url(../images/img4.jpg);}
+#container .bBottom ul li a{ color:#535353; font-size:12px; line-height:24px;}
+#container .Bottom{ height:250px; background:#e5e5e5; padding:20px 0 0 20px;}
+#container .Bottom h3{font-size:18px; font-weight:500; color:#8b8b8b; border-bottom:1px solid #c2c2c2; line-height:40px; padding-left:10px;}
+#container .Bottom .Bottoml{ width:455px; float:left;}
+#container .Bottom .BottomM{ width:153px; float:left; margin-left:50px;}
+#container .Bottom  ul{ list-style:none;}
+#container .Bottom  ul li{ width:134px; float:left; height:25px; line-height:25px; font-size:12px; color:#5b5b5b; padding-left:17px; background:url(../images/img5.jpg) no-repeat;}
+#container .Bottom .BottomR{ width:258px; height:250px; float:left; margin-left:50px; background:url(../images/img6.jpg) 0 50px no-repeat;}
+#container .footer{ height:80px; padding-top:24px;}
+#container .footer .footLeft{ height:20px; float:left;}
+#container .footer .footLeft ul{ list-style:none; margin-left:14px;}
+#container .footer .footLeft ul li{ float:left; border-right:1px solid #8b8b8b; width:58px; text-align:center; line-height:14px; font-size:10px; color:#a4a4a4;}
+#container .footer .footLeft ul .lastLi2{ width:75px; border-right:none;}
+#container .footer .footRight{ float:right; height:20px; margin-right:14px;}
+#container .footer .footRight img{ float:right; }
+#container .footer .footRight div{ line-height:20px; font-size:10px; color:#a4a4a4; display:inline-block }

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#container{ width:330px; height:400px; background:#CCC; margin:100px; padding:10px;}
+	#container input{ width:80px; height:60px; margin-left:20px; margin-top:15px; background-color:#666; font:18px bold; color:#FFF;} 
+	#container #output{ width:290px; height:80px; font-size:28px; line-height:40px; background-color:#09F; margin-left:20px; margin-top:15px;}
+</style>
+</head>
+
+<body>
+	<div id="container">
+    	<input type="button" value="1月" />
+    	<input type="button" value="2月" />
+    	<input type="button" value="3月" />
+        <input type="button" value="4月" />
+    	<input type="button" value="5月" />
+    	<input type="button" value="6月" />
+        <input type="button" value="7月" />
+    	<input type="button" value="8月" />
+    	<input type="button" value="9月" />
+        <input type="button" value="10月" />
+    	<input type="button" value="11月" />
+    	<input type="button" value="12月" />
+        <div id="output"></div>
+    </div>
+<script>
+	window.onload = function(){
+		var btn = document.getElementsByTagName("input");
+		var out = document.getElementById("output");
+		
+		function clear(){
+			for( var i = 0;i<btn.length;i++)
+			{
+				btn[i].style.backgroundColor = "#666";
+				btn[i].style.color = "#FFF";
+				}
+			}
+		
+		for( var i = 0;i<btn.length;i++)
+		{
+			btn[i].onclick = function(){
+				var month = this.value;
+				out.innerHTML = month+"<br/>aaaaaaaaaaaaaaaa~";
+				clear();
+				this.style.backgroundColor = "#FFF";
+				this.style.color = "red";
+				}
+			}
+	}
+	
+</script>
+</body>
+</html>

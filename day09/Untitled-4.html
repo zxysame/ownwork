@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	body{ background:#CCC;}
+	
+	table{ height:200px; height:200px;}
+	
+	.td{ width:10px; height:10px; background:#FFF;}
+</style>
+<script>
+	
+	window.onload = function(){
+		var tab = document.createElement("table");//创建表格
+		document.body.appendChild(tab);
+		var taby = document.createElement("tbody");
+			
+		for(var i = 0 ; i < 20 ; i++){
+				var tr = document.createElement("tr");
+				for(var j = 0 ; j < 20 ; j++){
+					var td = document.createElement("td");
+					td.setAttribute("class","td");
+					tr.appendChild(td);
+					}
+				taby.appendChild(tr);
+				}
+				tab.appendChild(taby);//创建表格结束
+				
+		var position = [ ];//蛇的位置的存贮
+		
+		function ready()//初始化蛇的位置,[0]is head
+		{
+			position[0] = ["2","0"];
+			position[1] = ["1","0"];
+			position[2] = ["0","0"];
+			}
+		ready();
+		
+		var tr = document.getElementsByTagName("tr");	
+		function snackDisplay(){
+			for(var i = 0; i< position.length; i++)
+			{
+				tr[position[i][1]].cells[position[i][0]].style.backgroundColor = "#ccc";
+			}
+		}
+		
+		var direction = "right";
+		
+		function fresh(){
+			move(direction);
+			snackDisplay();
+			}
+		
+		function move(direction){
+			var positionx = position[0][0];
+			var positiony = position[0][1];
+			switch(direction){
+				case "left": positionx--;break;
+				case "right": positionx++;break;
+				case "top": positiony--;break;
+				case "down": positiony++;break;
+				default:break;	
+				}
+			positionNew= [positionx,positiony];	
+			position.unshift(positionNew);
+			var brash =  position.pop();
+			tr[brash[1]].cells[brash[0]].style.backgroundColor = "#fff"
+			/*for(var i = 0; i< position.length; i++)
+			{
+				console.log(i);
+				console.log(position[i][0]);
+				console.log(position[i][1]);
+				}*/
+			}
+		
+		document.onkeypress = function(event){
+			var e = event || windos.event ;
+			alert(parseInt(e.KeyCode));
+			switch(e){
+				case 38:direction = "top";alert(direction);break;
+				case 40:direction = "down";alert(direction);break;
+				case 37:direction = "left";alert(direction);break;
+				case 39:direction = "right";alert(direction);break;
+				}
+			}
+		var btn = document.getElementById("ac");
+		btn.onclick = function(){
+			fresh();
+			}
+		}
+		
+		
+		//setInterval(fresh,1000);
+
+</script>
+</head>
+
+<body>
+
+	<input type="button" id="ac" value="321" />
+</body>
+</html>

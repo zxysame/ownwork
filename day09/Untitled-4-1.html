@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	body{ background:#CCC;}
+	
+	table{ height:200px; height:200px;}
+	
+	.td{ width:10px; height:10px; background:#FFF;}
+</style>
+<script>
+	
+	window.onload = function(){
+		var tab = document.createElement("table");//创建表格
+		document.body.appendChild(tab);
+		var taby = document.createElement("tbody");
+			
+		for(var i = 0 ; i < 20 ; i++){
+				var tr = document.createElement("tr");
+				for(var j = 0 ; j < 20 ; j++){
+					var td = document.createElement("td");
+					td.setAttribute("class","td");
+					tr.appendChild(td);
+					}
+				taby.appendChild(tr);
+				}
+				tab.appendChild(taby);//创建表格结束
+				
+		var positionx = [];//蛇的位置x的存贮
+		var positiony = [];//蛇的位置y的存贮
+		
+		function ready()//初始化蛇的位置,[0]is head
+		{
+			positionx=["0","0","0"]; 
+		    positiony=["0","1","2"];
+			}
+		ready();
+		
+		var point = document.getElementsByTagName("td");	
+		function snackDisplay(){
+			for(var i = 0; i< positionx.length; i++)
+			{
+				point[0].cells[i].style.backgroundColor = "#ccc"; 
+				}
+			}
+		var direction = "left";
+		
+		function move(direction){
+			var positionX = positionx[0];
+			var positionY = positiony[0];
+			switch(direction){
+				case "left": positionX++;break;
+				case "right": positionX--;break;
+				case "top": positionyY--;break;
+				case "down": positionY++;break;
+				default:break;	
+				}
+			positionx.pop();
+			positiony.pop();
+			positionx.unshift(positionx);
+			positiony.unshift(positiony);
+			}
+		move();
+		snackDisplay();
+		
+		document.onkeypress = function(event){
+			e = event || windos.event ;
+			alert(e.keyCode);
+			}
+		}
+</script>
+</head>
+
+<body>
+</body>
+</html>

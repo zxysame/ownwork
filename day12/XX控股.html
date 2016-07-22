@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="css/main.css" rel="stylesheet" />
+<script type="text/javascript">
+	window.onload = function(){
+			var btnL = document.getElementById("btnLeft");
+			var btnR = document.getElementById("btnRight");
+			var view = document.getElementById("view");
+			var btnSearch  = document.getElementsByClassName("btnSearch");
+			var speed = 0.02;
+			var timer;
+			var timerout;
+			var timerout2;  
+			var alpha = 1;
+			function lightOut(){
+				if(alpha > 0)
+				{
+				alpha -= speed;
+				view.style.opacity = alpha ;
+				}else 
+				{
+					speed = -speed
+					alpha -= speed;
+				}
+			}
+			
+			function change(){
+				view.style.backgroundImage = "url(images/view"+ i +".jpg)";
+				}
+			
+			function clear(){
+				window.clearInterval(timer);
+				window.clearTimeout(timerout);
+				window.clearTimeout(timerout2);
+				speed = 0.02;
+				alpha = 1;
+				view.style.opacity = alpha;
+				}
+			
+			console.log(btnL);
+			console.log(btnR);
+			var i = 1;
+			
+			btnL.onclick = function(){
+					clear();
+					i++;
+					if(i<6){
+					timer = setInterval(lightOut,20);
+					timerout = setTimeout(change,1000);
+					timerout2 = setTimeout(clear,2000);
+					}else i--;
+				}
+			btnR.onclick = function(){
+					clear();
+					i--;
+					if(i>0){
+					timer = setInterval(lightOut,20);
+					timerout = setTimeout(change,1000);
+					timerout2 = setTimeout(clear,2000);
+					}else i++;
+				}
+		}
+</script>
+<title>无标题文档</title>
+</head>
+
+<body>
+    <div id="container">
+    
+    		<div id="head">
+            <div class="logo"></div>
+            <div class="search">
+            <input type="text" placeholder="SEARCH..."  class="textSearch" />
+            <input type="button" class="btnSearch" />
+            </div>
+            </div>
+            
+            <div id="nick">
+            <ul class="nav">
+            	<li>集团介绍</li>
+                <li>产品中心</li>
+                <li>卧龙市场</li>
+                <li>技术研发</li>
+                <li>国际合作</li>
+                <li>投资者关系</li>
+                <li>新闻资讯</li>
+                <li class="lastLi">人力资源</li>
+            </ul>
+            </div>
+            
+            <div id="view">
+            	<input type="button" id="btnLeft" />
+                <input type="button" id="btnRight" />
+            </div>
+            
+            <div class="body">
+            
+            	<div class="bLeft">
+                	<h3>新闻资讯</h3>
+                    <ul>
+                    	<li>天门帅爱装逼</li><li class="date">2013-07-30</li>
+                    	<li>小学委睡觉打鼾</li><li class="date">2013-07-30</li>
+                    	<li>天门帅爱装逼</li><li class="date">2013-07-30</li>
+                    	<li>小学委睡觉打鼾</li><li class="date">2013-07-30</li>
+                    	<li>天门帅爱装逼</li><li class="date">2013-07-30</li>
+                    	<li>小学委睡觉打鼾</li><li class="date">2013-07-30</li>
+                    </ul> 
+                </div>
+                
+                <div class="bMiddle">
+                	<h3>卧龙介绍</h3>
+                    <div>公司成立与1984年</div>
+                    <a>经过30年的发展</a>
+                    <span>已成为电器制造，房地产开发和金融投资三业的综合性跨国..</span>
+                </div>
+                
+                <div class="bRight">
+                	<h3>人才招聘</h3>
+                    <a>培养一流的人才 铸造一流的工程<br />实现员工与企业的共同发展</a>
+                    <div class="hey">
+                    	<input type="button"  value="MORE->"/>
+                    </div>
+                </div>
+                
+                <div class="bBottom">
+                	<h3>卧龙市场</h3>
+                    <ul>
+                    	<li class="hi">
+                        	<div class="img1"></div>
+                            <a>交通轨道：由于主要采用电气牵引，而且轮轨摩擦阻力较小，与公共..</a>
+                        </li>
+                    	<li>
+                        	<div class="img2"></div>
+                            <a>节能环保：由于不断上涨的能源消耗和我们的专业知识，维护可持续..</a>
+                        </li>
+                    	<li>
+                        	<div class="img3"></div>
+                            <a>航空与船舰：如果你是在公海行驶，你与要确保你的船只的电力系统..</a>
+                        </li>
+                    	<li>
+                        	<div  class="img4"></div>
+                            <a>石油‘天然气及采矿：在市场中的安全性’可靠性‘效率和最短的停机..</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="Bottom">
+            	<div class="Bottoml">
+                	<h3>产品中心</h3>
+                    <ul>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    	<li>汽车电机</li>
+                    </ul>
+                </div>
+                
+                <div class="BottomM">
+                	<h3>技术研发</h3>
+                    <ul>
+                    	<li>科技力量</li>
+                    	<li>先进技术</li>
+                    	<li>研发创新</li>
+                    	<li>工艺流程</li>
+                    </ul>
+                </div>
+                
+                <div class="BottomR">
+                	<h3>营销网络</h3>
+                </div>
+            </div>
+            
+            <div class="footer">
+            	<div class="footLeft">
+                	<ul>
+                    	<li>网站地图</li>
+                    	<li>联系我们</li>
+                    	<li>关注卧龙</li>
+                    	<li class="lastLi2">采购系统入口</li>
+                    </ul>
+                </div>
+                <div class="footRight">
+                <div>分享到：</div>
+                <img  src="images/icon1.jpg"/> 
+                <img  src="images/icon2.jpg"/> 
+                <img  src="images/icon3.jpg"/> 
+                <img  src="images/icon4.jpg"/> 
+                <img  src="images/icon5.jpg"/> 
+                </div>
+            </div>
+    </div>
+    
+</body>
+</html>

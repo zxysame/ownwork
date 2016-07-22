@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<select id="first">
+    </select>
+    <select id="second">
+    </select>
+<script>
+	window.onload = function(){
+		var first= document.getElementById("first");
+		var second= document.getElementById("second");		
+		var arr = [ ];
+		
+		arr["河南"] = [ "郑州" , "赤壁" , "驻马店" ];
+		arr["浙江"] = [ "杭州" , "苏州" ];
+		arr["河北"] = [ "222" , "333" ];
+		
+		for( var i in arr)
+		{
+			first.add(new Option(i,i),null);
+			}
+			
+		function change(val){
+				second.innerHTML = "";
+				for(var i in arr)
+				{
+					if( i == val )
+					{
+						for( var j in arr[i] )
+						{
+							second.add(new Option(arr[i][j],arr[i][j]),null);
+							}
+						}
+					}
+			}
+		change("河南");
+		
+		first.onchange = function(){
+			change(first.value);
+			}
+	}
+</script>
+</body>
+</html>
